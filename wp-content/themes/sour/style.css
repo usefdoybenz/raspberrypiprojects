@@ -1,0 +1,409 @@
+/*
+Theme Name: Sour
+Theme URI: http://www.cryoutcreations.eu/wordpress-themes/sour
+Description: With a hot new color scheme, brand new fonts, and a clean and modern style, Sour is a fresh new WordPress theme. Sour is also lightning fast and so highly customizable that you can use it on all types of sites, from blogs and photography websites to portfolios and e-commerce (WooCommerce) shops. No matter how you use it, its freshness never wears off. And we don't even have to mention how lightweight, SEO-optimized, or responsive it is. What we will mention, however, is that Sour, being a child theme of Kahuna, has already been translated into over 15 languages and is also RTL-ready. Sour is fresh, like a cool smoothie on a hot summer afternoon. Sour- it's actually pretty sweet!
+Author: Cryout Creations
+Author URI: http://www.cryoutcreations.eu
+Version: 1.0.1
+Tested up to: 6.3
+Requires PHP: 5.6
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, photography
+Template: kahuna
+Text Domain: sour
+
+Sour WordPress Theme - Copyright 2023, Cryout Creations - http://www.cryoutcreations.eu
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+
+/* Articles */
+.post-thumbnail-container .featured-image-meta.entry-meta a,
+.post-thumbnail-container .featured-image-meta.entry-meta span,
+.post-thumbnail-container .featured-image-meta.entry-meta i::before,
+.post-thumbnail-container .featured-image-meta.entry-meta,
+.post-thumbnail-container .featured-image-meta.entry-meta time {
+    color: #FFF;
+}
+
+.post-thumbnail-container .featured-image-meta {
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.post-thumbnail-container .featured-image-link::before {
+    background: transparent;
+}
+
+.rtl .post-thumbnail-container .featured-image-link::before {
+    content: "\e916";
+}
+
+.post-thumbnail-container .featured-image-link {
+    opacity: 0;
+    /* left: 13%; */
+    transition: .5s ease-out all;
+}
+
+.post-thumbnail-container:hover .featured-image-link {
+    opacity: 1;
+    left: 0;
+}
+
+body .icon-continue-reading::before {
+  content: "\e925";
+}
+
+body.rtl .icon-continue-reading::before {
+  content: "\e924";
+}
+
+.continue-reading-link {
+    border-radius: 100px;
+}
+
+.continue-reading-link::before {
+    top: 0;
+    transition: .3s ease-out all;
+}
+
+.continue-reading-link:hover::before {
+    opacity: 1;
+    top: calc(-75% - 4px);
+}
+
+.continue-reading-link span {
+    top: auto;
+    text-transform: none;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.entry-meta {
+    text-transform: none;
+    padding-bottom: 2px;
+}
+
+.entry-meta em {
+    display: inline;
+}
+
+.author-description .page-title,
+#comments-title,
+#reply-title,
+.related-main-title {
+    text-transform: none;
+    font-size: 1.5em;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    border-radius: 100px;
+}
+
+.entry-utility span a {
+    border-bottom: 0;
+}
+
+.entry-title {
+    line-height: 1.2;
+}
+
+article.hentry .post-thumbnail-container {
+    margin-top: 0.5em;
+}
+
+.searchform input[type="search"] {
+    border-radius: 5px;
+}
+
+.featured-image-meta.entry-meta span.entry-sticky,
+.entry-meta span.entry-sticky {
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: initial;
+}
+
+.page-link a,
+.page-link > span > em {
+    border-radius: 100px;
+    padding-top: 1px;
+}
+
+.post-thumbnail-container .entry-meta .icon-metas {
+    position: relative;
+    top: -2px;
+}
+
+.entry-content h5,
+.entry-content h6 {
+    text-transform: none;
+}
+
+.pagination span,
+.pagination a {
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.author-avatar .avatar {
+    border-radius: 100px;
+    border: 2px solid rgba(0,0,0,.1);
+    padding: 3px;
+}
+
+.author-info {
+    display: flex;
+}
+
+.author-info .author-avatar {
+    align-self: center;
+}
+
+.author-info .author-description {
+    width: 85%;
+}
+
+@media (max-width:640px) {
+    .author-info {
+        flex-flow: column;
+    }
+
+    .author-info .author-description {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+a#toTop {
+    border-radius: 4px;
+}
+
+.entry-title a,
+.entry-meta span a,
+.lp-box-readmore,
+.lp-box-readmore:hover,
+.lp-box-title a {
+    border: none;
+}
+
+.entry-title a:hover,
+.entry-meta span a:hover,
+.lp-box-readmore:hover,
+.lp-box-title a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: currentcolor;
+    text-decoration-thickness: 2px;
+}
+
+.entry-title a:hover {
+    color: inherit;
+}
+
+/* Main menu */
+#access > div > ul > li > a > span::before,
+#site-title::before {
+    top: auto;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+}
+
+#access > div > ul > li:hover > a > span::before,
+#site-title:hover::before {
+    height: 2px;
+    width: 90%;
+}
+
+#access a > span {
+    text-transform: none;
+}
+
+/* Landing Page */
+a.staticslider-button,
+.seriousslider-theme .seriousslider-caption-buttons a.seriousslider-button {
+    font-size: 1em;
+    letter-spacing: 0;
+    border-radius: 100px;
+    text-transform: none;
+}
+
+
+.main .lp-block-title {
+    margin: .5em auto .75em;
+    font-size: 1.4em;
+    text-transform: none;
+}
+
+.lp-block i[class^="blicon"]::before {
+    border-color: rgba(0,0,0,.2);
+    border-radius: 100px;
+}
+
+.lp-block i[class^="blicon"]::after {
+    content: "";
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.lp-text-image::before {
+    content: none;
+}
+
+.lp-text-image {
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+.lp-block-readmore {
+    letter-spacing: 0;
+    font-size: 1em;
+    text-transform: none;
+}
+
+.lp-boxes-static .lp-box-image .box-overlay {
+    left: 50%;
+    width: 100%;
+}
+
+.lp-boxes-static .lp-box:hover .box-overlay {
+    left: 0;
+}
+
+.lp-boxes.lp-boxes-static .lp-box {
+    border-radius: 6px;
+}
+
+.lp-boxes-static .lp-box:hover {
+  box-shadow: 0 0px 50px 5px rgba(0,0,0, 0.15);
+}
+
+.lp-boxes .lp-boxes-inside {
+    overflow: visible;
+}
+
+.main .lp-box-title {
+    font-size: 1.5em;
+    text-transform: none;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.lp-box-title a {
+    text-transform: none;
+    transition: .2s ease-out all;
+}
+
+.lp-boxes-animated .lp-box-text {
+    padding-bottom: 2px;
+}
+
+.lp-box-text-inside {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.lp-boxes-animated .lp-box-text-inside {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.lp-boxes-animated .lp-box::before {
+    border-width: 20px;
+    border-radius: 30px;
+}
+
+.lp-boxes-animated .lp-box:hover::before {
+    border-width: 0;
+    border-radius: 0;
+}
+
+.lp-boxes-animated .lp-box-content {
+    color: #FFF;
+    width: 90%;
+}
+
+#cryout_ajax_more_trigger::before {
+    content: "\e97b";
+    left: 0.5em;
+}
+
+.rtl #cryout_ajax_more_trigger::before {
+    left: auto;
+    right: 0.5em;
+}
+
+#cryout_ajax_more_trigger::after {
+    background: transparent;
+}
+
+#cryout_ajax_more_trigger {
+    border-radius: 100px;
+}
+
+#cryout_ajax_more_trigger > span {
+    text-indent: 0.5em;
+}
+
+/* Comments */
+.main .commentlist img.avatar {
+    border-radius: 100px;
+}
+
+.comment .reply a {
+    border-bottom: 0;
+}
+
+/* Footer and widgets */
+
+.widget-title {
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 1.5em;
+}
+
+.kahuna-normalizedtags #content .tagcloud a {
+    padding: 2px 10px 0 10px;
+    text-transform: none;
+    font-size: 1em !important;
+}
+
+#header-page-title #breadcrumbs-nav a,
+#breadcrumbs-nav,
+#header-page-title .byline {
+    color: #FFF;
+    opacity: 1;
+}
+
+#breadcrumbs-nav .icon-bread-arrow {
+    top: 0;
+}
+
+#header-page-title #breadcrumbs {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1em;
+}
+
+.socials a {
+    font-size: 1em;
+    border-radius: 100px;
+}
+
+#nav-fixed i,
+#nav-fixed a + a {
+    background: rgba(255,255,255,.2);
+    border-radius: 4px;
+}
+
+
+
+/* FIN */
