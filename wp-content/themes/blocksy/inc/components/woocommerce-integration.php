@@ -21,6 +21,7 @@ require get_template_directory() . '/inc/components/woocommerce/archive/loop.php
 require get_template_directory() . '/inc/components/woocommerce/archive/loop-elements.php';
 require get_template_directory() . '/inc/components/woocommerce/archive/pagination.php';
 
+require get_template_directory() . '/inc/components/woocommerce/single/helpers.php';
 require get_template_directory() . '/inc/components/woocommerce/single/review-form.php';
 require get_template_directory() . '/inc/components/woocommerce/single/single-modifications.php';
 require get_template_directory() . '/inc/components/woocommerce/single/add-to-cart.php';

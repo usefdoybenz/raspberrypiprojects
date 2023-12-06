@@ -42,7 +42,9 @@ class DbVersioning {
 
 		$successfull_patches = 0;
 
-		delete_transient('blocksy_dynamic_styles_descriptor');
+		if (count($patches_to_run) > 0) {
+			delete_transient('blocksy_dynamic_styles_descriptor');
+		}
 
 		foreach ($patches_to_run as $single_patch) {
 			$result = call_user_func($single_patch['cb']);

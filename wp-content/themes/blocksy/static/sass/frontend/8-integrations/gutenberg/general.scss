@@ -16,3 +16,11 @@ article > .entry-content {
 		}
 	}
 }
+
+
+body .is-layout-constrained {
+
+	> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+		width: var(--theme-default-editor, var(--theme-block-width));
+	}
+}

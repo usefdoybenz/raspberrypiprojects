@@ -64,6 +64,7 @@ class V202 {
 
 		foreach ($value as $key => $item) {
 			if (! isset($colorPalette[$key])) {
+				$did_update = true;
 				$colorPalette[$key] = $item;
 			}
 		}

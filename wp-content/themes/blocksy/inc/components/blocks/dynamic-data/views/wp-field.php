@@ -78,9 +78,7 @@ if ($field === 'wp:date') {
 	$value = get_the_date($date_format);
 
 	if (blocksy_akg('date_type', $attributes, 'published') === 'modified') {
-		if ($attributes['data_type'] === 'modified') {
-			$value = get_the_modified_date($date_format);
-		}
+		$value = get_the_modified_date($date_format);
 	}
 
 	if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {

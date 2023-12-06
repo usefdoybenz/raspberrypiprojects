@@ -63,7 +63,7 @@ $radiobox:
 		}
 	}
 
-	&:focus {
+	&:focus-visible {
 		outline: none;
 		border-color: var(--theme-form-selection-field-active-color);
 	}

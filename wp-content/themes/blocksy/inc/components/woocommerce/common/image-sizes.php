@@ -21,6 +21,13 @@ class WooCommerceImageSizes {
 		}
 
 		add_filter(
+			'woocommerce_get_image_size_archive_thumbnail',
+			function ($size) {
+				return $this->get_image_size('archive_thumbnail', 500);
+			}
+		);
+
+		add_filter(
 			'woocommerce_image_sizes_to_resize',
 			function ($sizes) {
 				$sizes[] = 'woocommerce_archive_thumbnail';

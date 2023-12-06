@@ -29,7 +29,11 @@ class Blocksy_Static_Css_Files {
 					blocksy_get_theme_mod('woocommerce_wish_list_page', '__EMPTY__')
 				)
 				||
-				blocksy_has_product_share_box()
+				(
+					function_exists('blocksy_has_product_share_box()')
+					&&
+					blocksy_has_product_share_box()
+				)
 				||
 				(
 					function_exists('is_account_page')
@@ -40,7 +44,7 @@ class Blocksy_Static_Css_Files {
 		);
 
 		$prefix = blocksy_manager()->screen->get_prefix();
-
+		
 		return [
 			[
 				'id' => 'ct-main-styles',
@@ -198,7 +202,11 @@ class Blocksy_Static_Css_Files {
 					(
 						is_singular()
 						&&
-						blocksy_get_theme_mod($prefix . '_related_posts_slideshow') === 'slider'
+						(
+							blocksy_get_theme_mod($prefix . '_related_posts_slideshow') === 'slider'
+							||
+							is_customize_preview()
+						)
 					)
 				)
 			],

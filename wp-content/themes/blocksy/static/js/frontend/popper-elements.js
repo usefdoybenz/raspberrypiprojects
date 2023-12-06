@@ -1,4 +1,12 @@
+let mounted = false
+
 export const mount = (reference) => {
+	if (mounted) {
+		return
+	}
+
+	mounted = true
+
 	if (!reference.nextElementSibling) {
 		return
 	}

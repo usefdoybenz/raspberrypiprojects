@@ -20,7 +20,7 @@ $additional_logos = apply_filters(
 
 if ($custom_logo_id) {
 	$custom_logo_attr = [
-		// 'class' => '',
+		'class' => 'default-logo',
 		'itemprop' => 'logo',
 		'loading' => false
 	];

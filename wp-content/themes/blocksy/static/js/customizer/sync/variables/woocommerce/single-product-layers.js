@@ -287,9 +287,14 @@ const collectVariablesForLayers = (v) => {
 			}
 
 			if (actionButtons.length) {
-				actionButtons.forEach((button) => {
+				actionButtons.forEach((button, index) => {
 					;[...button.querySelectorAll('.ct-label')].map((label) => {
 						responsiveClassesFor(layer.label_visibility, label)
+
+						if (layer?.woo_actions_layout?.[index]?.label) {
+							label.innerHTML =
+								layer.woo_actions_layout[index].label
+						}
 					})
 				})
 			}

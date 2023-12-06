@@ -210,21 +210,25 @@ const loadSingleEntryPoint = ({
 
 				el.hasLazyLoadClickHoverListener = true
 
+				const l = (event) => {
+					event.preventDefault()
+
+					load().then((arg) =>
+						mount({
+							...arg,
+							event,
+							el,
+						})
+					)
+				}
+
 				el.addEventListener(
 					isTouchDevice() ? 'click' : 'mouseover',
-					(event) => {
-						event.preventDefault()
-
-						load().then((arg) =>
-							mount({
-								...arg,
-								event,
-								el,
-							})
-						)
-					},
+					l,
 					{ once: true }
 				)
+
+				el.addEventListener('focus', l, { once: true })
 			})
 		}
 

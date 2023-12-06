@@ -41,7 +41,14 @@ add_action('woocommerce_post_class', function ($classes) {
 
 	global $blocksy_is_quick_view;
 
-	if (! $blocksy_is_quick_view) {
+	global $product;
+
+	if (
+		! $blocksy_is_quick_view
+		&&
+		// Integration with Custom Product Boxes plugin
+		$product->get_type() !== 'wdm_bundle_product'
+	) {
 		$classes[] = 'ct-default-gallery';
 	}
 

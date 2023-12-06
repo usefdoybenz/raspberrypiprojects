@@ -188,11 +188,11 @@ export const getWooArchiveVariablesFor = () => ({
 	// product price
 	...typographyOption({
 		id: 'cardProductPriceFont',
-		selector: '[data-products] .price',
+		selector: '[data-products] .product .price',
 	}),
 
 	cardProductPriceColor: {
-		selector: '[data-products] .price',
+		selector: '[data-products] .product .price',
 		variable: 'theme-text-color',
 		type: 'color',
 		responsive: true,

@@ -281,7 +281,7 @@ blocksy_output_font_css([
 	'css' => $css,
 	'tablet_css' => $tablet_css,
 	'mobile_css' => $mobile_css,
-	'selector' => '[data-products] .price'
+	'selector' => '[data-products] .product .price'
 ]);
 
 blocksy_output_colors([
@@ -295,7 +295,7 @@ blocksy_output_colors([
 	'responsive' => true,
 	'variables' => [
 		'default' => [
-			'selector' => '[data-products] .price',
+			'selector' => '[data-products] .product .price',
 			'variable' => 'theme-text-color'
 		],
 	],

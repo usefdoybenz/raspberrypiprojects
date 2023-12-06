@@ -1,3 +1,15 @@
+2.0.5: 2023-12-06
+- Improvement: Better handle the single product gallery layout when other plugins change the markup
+- Improvement: Consolidate check for share box presence in single product page
+- Improvement: Cover block and nested full width cover block improvement
+- Improvement: Ensure archive_thumbnail size is registered correctly within Woo
+- Improvement: Theme database migrator correctly drop styles transient
+- Fix: Off canvas logo gets doubled with dark mode
+- Fix: PHP warning with Dynamic Data block inside of a post, when set to "post updated date"
+- Fix: Related posts slider type - assets don't get initialized correctly
+- Fix: Search icon lifts up on hover in the search box module
+- Fix: WooCommerce archive cards type 2 - price typography option doesn't apply correctly
+
 2.0.4: 2023-11-30
 - Improvement: Correctly display share box element in single product layouts
 - Improvement: Refine CSS variables migrator reliability

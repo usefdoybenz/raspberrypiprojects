@@ -17,16 +17,18 @@
 	&[data-form-controls="inside"] {
 
 		.wp-element-button {
+			transform: none;
+			box-shadow: none;
 			border-radius: var(--has-classic-forms, var(--theme-form-field-border-radius, 3px));
 			border-start-start-radius: 0;
 			border-end-start-radius: 0;
 			border-width: var(--theme-form-field-border-width, 1px);
 			border-style: var(--theme-form-field-border-style, solid);
 			border-color: var(--theme-form-field-border-initial-color);
+
 			--theme-icon-size: 13px;
 			--theme-button-text-initial-color: var(--theme-text-color);
 			--theme-button-text-hover-color: var(--theme-form-field-border-focus-color);
-			
 			--theme-button-background-initial-color: var(--has-classic-forms, var(--theme-form-field-background-initial-color));
 			--theme-button-background-hover-color: var(--has-classic-forms, var(--theme-form-field-background-initial-color));
 		}
